@@ -1,17 +1,17 @@
 import React, { useState } from 'react' // Importing React and useState hook
-// import { useDispatch } from 'react-redux' // Importing useDispatch hook from react-redux
+import { useDispatch } from 'react-redux' // Importing useDispatch hook from react-redux
 import { addTodo } from '../features/todo/todoSlice' // Importing addTodo action from todoSlice
 
 const AddTodo = () => {
-  // const dispatch = useDispatch()
-// 
+  
   // Declaring text state and setText updater function using useState hook
   const [text, setText] = useState('')
+  const dispatch = useDispatch()
 
   // handleSubmit function to add a new todo
   const handleSubmit = (e) => {
     e.preventDefault() 
-    // dispatch(addTodo(text)) 
+    dispatch(addTodo(text)) 
     setText('') 
   }
 

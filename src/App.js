@@ -1,12 +1,12 @@
 import './App.css';
 import AddTodo from './components/AddTodo';
-import Todos from './components/Todos';
+import To from './components/To';
 
 function App() {
   return (
    <div>
       <AddTodo/>
-      <Todos />
+      <To />
    </div>
   );
 }
