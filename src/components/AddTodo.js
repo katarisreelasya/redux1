@@ -17,20 +17,23 @@ const AddTodo = () => {
 
   // JSX for the AddTodo component
   return (
-    <form onSubmit={handleSubmit} className="space-x-3 mt-12">
-      {/* Text input field for adding a new todo */}
-      <input
-        type="text"
-        value={text}
-        placeholder="Add Todo"
-        className="bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:right-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-        onChange={(e) => setText(e.target.value)}
-      />
-      {/* Button to submit the form and add the new todo */}
-      <button type="submit" className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-        Add
-      </button>
-    </form>
+    <>
+      <h1 className='items-center px-10 py-10 text-black font-bold text-5xl' id="todo">To-do List</h1>
+      <form onSubmit={handleSubmit} className="space-x-3 mt-2">
+        {/* Text input field for adding a new todo */}
+        <input
+          type="text"
+          value={text}
+          placeholder="Add Todo"
+          className="bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:right-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+          onChange={(e) => setText(e.target.value)}
+        />
+        {/* Button to submit the form and add the new todo */}
+        <button type="submit" className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+          Add
+        </button>
+      </form>
+    </>
   )
 }
 
